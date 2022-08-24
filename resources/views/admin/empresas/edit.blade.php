@@ -36,12 +36,11 @@
 
 @section('content')
     @php
-    $tipo_puestos = json_decode($empresas->tipo_puesto);
     $areas = json_decode($empresas->area);
     $tipo_contrataciones = json_decode($empresas->tipo_contratacion);
     $jornada_trabajos = json_decode($empresas->jornada_trabajo);
     $rotacion_turnos = json_decode($empresas->rotacion_turnos);
-    $rotacion_personal = json_decode($empresas->rotacion_personal);
+    $tipo_empleado = json_decode($empresas->tipo_empleado);
     @endphp
     <div class="content">
 
@@ -194,44 +193,6 @@
 
 
                                 <div class="col-12 col-md-6">
-                                    <div class="col-12 col-md-12 mb-4 cards">
-
-                                        <div class="form-group">
-
-                                            <label for="my-input">Tipo de puesto</label>
-
-                                            @foreach ($tipo_puestos as $key => $tipo_puesto)
-                                                <input type="hidden" name="tipo_puesto" value="{{ $key + 1 }}">
-
-                                                <div class="form-group__content input-group mb-3 tipo_puesto">
-
-                                                    <div class="input-group-append">
-
-                                                        <span class="input-group-text">
-
-                                                            <span class="badge badge-danger"
-                                                                onclick="removeInput({{ $key }},'tipo_puesto')"><i
-                                                                    class="fas fa-times"></i></span>
-
-                                                        </span>
-
-                                                    </div>
-
-                                                    <input type="text" class="form-control"
-                                                        name="summaryPuesto_{{ $key }}"
-                                                        value="{{ $tipo_puesto }}">
-
-                                                </div>
-                                            @endforeach
-
-                                            <button class="btn btn-success btn-sm mb-2" type="button" id="addOption"
-                                                onclick="addInput(this, 'tipo_puesto')"><i
-                                                    class="fas fa-plus mr-2"></i>Añadir</button>
-
-                                        </div>
-
-                                    </div>
-
                                     <div class="col-12 col-md-12 mb-4 cards">
 
                                         <div class="form-group">
@@ -392,20 +353,20 @@
 
                                         <div class="form-group">
 
-                                            <label for="my-input">Rotacion de personal</label>
+                                            <label for="my-input">Tipo de Empleado</label>
 
-                                            @foreach ($rotacion_personal as $key => $rotacion)
-                                                <input type="hidden" name="rotacion_personal"
+                                            @foreach ($tipo_empleado as $key => $rotacion)
+                                                <input type="hidden" name="tipo_empleado"
                                                     value="{{ $key + 1 }}">
 
-                                                <div class="form-group__content input-group mb-3 rotacion_personal">
+                                                <div class="form-group__content input-group mb-3 tipo_empleado">
 
                                                     <div class="input-group-append">
 
                                                         <span class="input-group-text">
 
                                                             <span class="badge badge-danger"
-                                                                onclick="removeInput({{ $key }},'rotacion_personal')"><i
+                                                                onclick="removeInput({{ $key }},'tipo_empleado')"><i
                                                                     class="fas fa-times"></i></span>
 
                                                         </span>
@@ -413,7 +374,7 @@
                                                     </div>
 
                                                     <input type="text" class="form-control"
-                                                        name="summaryRotacionPersonal_{{ $key }}"
+                                                        name="summaryTipoEmpleado_{{ $key }}"
                                                         value="{{ $rotacion }}">
 
                                                 </div>
@@ -484,30 +445,6 @@
             var inputs = $("." + type);
 
             if (inputs.length < 1000) {
-
-                if (type == "tipo_puesto") {
-
-                    $(elem).before(`
-
-                        <div class="form-group__content input-group mb-3 tipo_puesto">
-
-                            <div class="input-group-append">
-
-                                <span class="input-group-text">
-
-                                    <span class="badge badge-danger" onclick="removeInput(${inputs.length},'tipo_puesto')"><i class="fas fa-times"></i></span>
-
-                                </span>
-
-                            </div>
-
-                            <input type="text" class="form-control" name="summaryPuesto_${inputs.length}">
-
-                        </div>
-
-                    `);
-
-                }
 
                 if (type == "area") {
 
@@ -605,23 +542,23 @@
 
                 }
 
-                if (type == "rotacion_personal") {
+                if (type == "tipo_empleado") {
 
                     $(elem).before(`
 
-                        <div class="form-group__content input-group mb-3 rotacion_personal">
+                        <div class="form-group__content input-group mb-3 tipo_empleado">
 
                             <div class="input-group-append">
 
                                 <span class="input-group-text">
 
-                                    <span class="badge badge-danger" onclick="removeInput(${inputs.length},'rotacion_personal')"><i class="fas fa-times"></i></span>
+                                    <span class="badge badge-danger" onclick="removeInput(${inputs.length},'tipo_empleado')"><i class="fas fa-times"></i></span>
 
                                 </span>
 
                             </div>
 
-                            <input type="text" class="form-control" name="summaryRotacion_${inputs.length}">
+                            <input type="text" class="form-control" name="summaryTipoEmpleado_${inputs.length}">
 
                         </div>
 

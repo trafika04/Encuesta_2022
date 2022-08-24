@@ -22,7 +22,7 @@
 
     <label>Jornada de trabajo</label>
 
-    <select class="form-control" id="jornada_trabajo" name="jornada_trabajo">
+    <select class="form-control @if ($empresa->token === 'f3we8ohe-h677-alf7-f8ij-es1pgtnm8kj') mb-3 @endif" id="jornada_trabajo" name="jornada_trabajo">
 
         <option value="">--Elige una opción--</option>
 
@@ -33,6 +33,13 @@
         @endforeach
 
     </select>
+
+    @if ($empresa->token === 'f3we8ohe-h677-alf7-f8ij-es1pgtnm8kj')
+        <div class="form-group d-none" id="otro">
+            <label>Otro:</label>
+            <input type="text" name="jornada_trabajo_opcional" class="form-control">
+        </div>
+    @endif
 
 </div>
 
@@ -64,13 +71,13 @@
 
 <div class="form-group mb-4">
 
-    <label>Rotación de personal</label>
+    <label>Tipo de Empleado</label>
 
-    <select class="form-control mb-2" id="rotacion_personal" name="rotacion_personal">
+    <select class="form-control mb-2" id="tipo_empleado" name="tipo_empleado">
 
         <option value="">--Elige una opción--</option>
 
-        @foreach ($rotacion_personal as $rotacion)
+        @foreach ($tipo_empleado as $rotacion)
 
             <option value="{{ $rotacion }}">{{ $rotacion }}</option>
 

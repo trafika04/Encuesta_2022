@@ -24,28 +24,6 @@
 
 </div>
 
-
-
-<div class="form-group">
-
-    <label>Tipo de puesto</label>
-
-    <select class="form-control" id="tipo_puesto" name="tipo_puesto">
-
-        <option value="">--Elige una opción--</option>
-
-        @foreach ($tipo_puesto as $puesto)
-
-            <option value="{{ $puesto }}">{{ $puesto }}</option>
-
-        @endforeach
-
-    </select>
-
-</div>
-
-
-
 <div class="form-group">
 
     <label>Área</label>

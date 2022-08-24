@@ -51,8 +51,6 @@ class CreateEmpresasTable extends Migration
 
             // Campos para dorwpdowns
 
-            $table->text('tipo_puesto')->nullable();
-
             $table->text('area')->nullable();
 
             $table->text('tipo_contratacion')->nullable();
@@ -60,7 +58,7 @@ class CreateEmpresasTable extends Migration
             $table->text('jornada_trabajo')->nullable();
 
             $table->text('rotacion_turnos')->nullable();
-            $table->text('rotacion_personal')->nullable();
+            $table->text('tipo_empleado')->nullable();
 
             $table->timestamps();
 

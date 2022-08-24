@@ -228,7 +228,7 @@
 
 
                             <div class="col-12 col-md-6">
-                                <div class="col-12 col-md-12 mb-4 cards">
+                                {{-- <div class="col-12 col-md-12 mb-4 cards">
 
                                     <div class="form-group">
 
@@ -260,7 +260,7 @@
 
                                     </div>
 
-                                </div>
+                                </div> --}}
 
                                 <div class="col-12 col-md-12 mb-4 cards">
 
@@ -400,7 +400,7 @@
                                 {{-- Rotacion de turnos --}}
 
                                 {{-- Rotacion de personal --}}
-                                <div class="col-12 col-md-12 mb-4 cards">
+                                {{-- <div class="col-12 col-md-12 mb-4 cards">
 
                                     <div class="form-group">
 
@@ -432,8 +432,44 @@
 
                                     </div>
 
-                                </div>
+                                </div> --}}
                                 {{-- Rotacion de personal --}}
+
+                                {{-- Tipo de Empleado --}}
+                                <div class="col-12 col-md-12 mb-4 cards">
+
+                                    <div class="form-group">
+
+                                        <label for="my-input">Tipo de Empleado</label>
+
+                                        <input type="hidden" name="tipo_empleado" value="1">
+
+                                        <div class="form-group__content input-group mb-3 tipo_empleado">
+
+                                            <div class="input-group-append">
+
+                                                <span class="input-group-text">
+
+                                                    <span class="badge badge-danger"
+                                                        onclick="removeInput(0,'tipo_empleado')"><i
+                                                            class="fas fa-times"></i></span>
+
+                                                </span>
+
+                                            </div>
+
+                                            <input type="text" class="form-control" name="summaryTipoEmpleado_0">
+
+                                        </div>
+
+                                        <button class="btn btn-success btn-sm mb-2" type="button" id="addOption"
+                                            onclick="addInput(this, 'tipo_empleado')"><i
+                                                class="fas fa-plus mr-2"></i>Añadir</button>
+
+                                    </div>
+
+                                </div>
+                                {{-- Tipo de Empleado --}}
                             </div>
 
                             <div class="col-12 col-md-12">
@@ -489,30 +525,6 @@
             var inputs = $("." + type);
 
             if (inputs.length < 1000) {
-
-                if (type == "tipo_puesto") {
-
-                    $(elem).before(`
-
-                        <div class="form-group__content input-group mb-3 tipo_puesto">
-
-                            <div class="input-group-append">
-
-                                <span class="input-group-text">
-
-                                    <span class="badge badge-danger" onclick="removeInput(${inputs.length},'tipo_puesto')"><i class="fas fa-times"></i></span>
-
-                                </span>
-
-                            </div>
-
-                            <input type="text" class="form-control" name="summaryPuesto_${inputs.length}">
-
-                        </div>
-
-                    `);
-
-                }
 
                 if (type == "area") {
 
@@ -610,23 +622,23 @@
 
                 }
 
-                if (type == "rotacion_personal") {
+                if (type == "tipo_empleado") {
 
                     $(elem).before(`
 
-                        <div class="form-group__content input-group mb-3 rotacion_personal">
+                        <div class="form-group__content input-group mb-3 tipo_empleado">
 
                             <div class="input-group-append">
 
                                 <span class="input-group-text">
 
-                                    <span class="badge badge-danger" onclick="removeInput(${inputs.length},'rotacion_personal')"><i class="fas fa-times"></i></span>
+                                    <span class="badge badge-danger" onclick="removeInput(${inputs.length},'tipo_empleado')"><i class="fas fa-times"></i></span>
 
                                 </span>
 
                             </div>
 
-                            <input type="text" class="form-control" name="summaryRotacionPersonal_${inputs.length}">
+                            <input type="text" class="form-control" name="summaryTipoEmpleado_${inputs.length}">
 
                         </div>
 
