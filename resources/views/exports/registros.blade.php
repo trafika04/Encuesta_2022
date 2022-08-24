@@ -45,7 +45,6 @@
             <th style="width: 180px;">Área</th>
 
             <th style="width: 180px;">Tipo de contratacion</th>
-            <th style="width: 180px;">Tipo de empleado</th>
 
             <th style="width: 180px;">Jornada de trabajo</th>
 
@@ -187,7 +186,6 @@
             <td>{{ $registro->estudios }}</td>
 
             <td>{{ $registro->tipo_puesto }}</td>
-            <td>{{ $registro->tipo_empleado }}</td>
 
             <td>{{ $registro->area }}</td>
 

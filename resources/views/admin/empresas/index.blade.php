@@ -434,42 +434,6 @@
 
                                 </div> --}}
                                 {{-- Rotacion de personal --}}
-
-                                {{-- Tipo de Empleado --}}
-                                <div class="col-12 col-md-12 mb-4 cards">
-
-                                    <div class="form-group">
-
-                                        <label for="my-input">Tipo de Empleado</label>
-
-                                        <input type="hidden" name="tipo_empleado" value="1">
-
-                                        <div class="form-group__content input-group mb-3 tipo_empleado">
-
-                                            <div class="input-group-append">
-
-                                                <span class="input-group-text">
-
-                                                    <span class="badge badge-danger"
-                                                        onclick="removeInput(0,'tipo_empleado')"><i
-                                                            class="fas fa-times"></i></span>
-
-                                                </span>
-
-                                            </div>
-
-                                            <input type="text" class="form-control" name="summaryTipoEmpleado_0">
-
-                                        </div>
-
-                                        <button class="btn btn-success btn-sm mb-2" type="button" id="addOption"
-                                            onclick="addInput(this, 'tipo_empleado')"><i
-                                                class="fas fa-plus mr-2"></i>Añadir</button>
-
-                                    </div>
-
-                                </div>
-                                {{-- Tipo de Empleado --}}
                             </div>
 
                             <div class="col-12 col-md-12">
@@ -615,30 +579,6 @@
                             </div>
 
                             <input type="text" class="form-control" name="summaryRotacion_${inputs.length}">
-
-                        </div>
-
-                    `);
-
-                }
-
-                if (type == "tipo_empleado") {
-
-                    $(elem).before(`
-
-                        <div class="form-group__content input-group mb-3 tipo_empleado">
-
-                            <div class="input-group-append">
-
-                                <span class="input-group-text">
-
-                                    <span class="badge badge-danger" onclick="removeInput(${inputs.length},'tipo_empleado')"><i class="fas fa-times"></i></span>
-
-                                </span>
-
-                            </div>
-
-                            <input type="text" class="form-control" name="summaryTipoEmpleado_${inputs.length}">
 
                         </div>
 

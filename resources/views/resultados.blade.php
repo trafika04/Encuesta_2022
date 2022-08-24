@@ -212,16 +212,6 @@
 
                 </p>
 
-                <p class="mb-3">
-
-                    <b>Tipo de Empleado:</b>
-
-                    <br>
-
-                    {{ $registro->tipo_empleado }}
-
-                </p>
-
             </div>
 
 

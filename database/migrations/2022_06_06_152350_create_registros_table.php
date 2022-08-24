@@ -29,7 +29,6 @@ class CreateRegistrosTable extends Migration
             $table->text('jornada_trabajo')->nullable();
             $table->text('jornada_trabajo_opcional')->nullable();
             $table->text('rotacion_turnos')->nullable();
-            $table->text('tipo_empleado')->nullable();
             $table->text('experiencia_laboral')->nullable();
             $table->integer('item_1')->nullable();
             $table->integer('item_2')->nullable();

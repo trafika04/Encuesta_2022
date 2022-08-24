@@ -58,7 +58,6 @@ class CreateEmpresasTable extends Migration
             $table->text('jornada_trabajo')->nullable();
 
             $table->text('rotacion_turnos')->nullable();
-            $table->text('tipo_empleado')->nullable();
 
             $table->timestamps();
 

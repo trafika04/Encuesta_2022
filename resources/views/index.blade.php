@@ -223,7 +223,6 @@
                         $jornada_trabajo = json_decode($empresa->jornada_trabajo);
 
                         $rotacion_turnos = json_decode($empresa->rotacion_turnos);
-                        $tipo_empleado = json_decode($empresa->tipo_empleado);
 
                         // Usar carbon para fechas
                         $fecha_actual = Carbon\Carbon::now();
@@ -792,87 +791,53 @@
             })
 
 
-            // $("input[name='item_jefe']").change(function() {
+            $("input[name='item_jefe']").change(function() {
 
-            //     var valor = $(this).val();
+                var valor = $(this).val();
 
-            //     if (valor == 'Sí') {
+                if (valor == 'Sí') {
 
-            //         $("#radio_input_1").css("display", "block");
-            //         $('#stepInstrucciones').show();
-            //         $('#btn_atras_1').show();
-            //         $('#formInputs').show();
-            //         $('#step18').show();
-            //         $('#step19').show();
-            //         $('#step20').show();
-            //         $('#stepInstrucciones_btn').show();
-            //         $('#stepFinales').hide();
-            //         $('#btn_atras_2').hide();
+                    $("#radio_input_1").css("display", "block");
+                    $('#formInputs').show();
 
-            //     } else {
+                } else {
 
-            //         $("#radio_input_1").css("display", "none");
-            //         $('#stepInstrucciones').hide();
-            //         $('#btn_atras_1').hide();
-            //         $('#formInputs').hide();
-            //         $('#step18').hide();
-            //         $('#step19').hide();
-            //         $('#step20').hide();
-            //         $('#stepInstrucciones_btn').hide();
-            //         $('#stepFinales').show();
-            //         $('#btn_atras_2').show();
-            //         $('#radio_input_1').find('input[type="radio"]').prop('checked', false);
-            //         $('#radio_input_2').find('input[type="radio"]').prop('checked', false);
-            //         $('.step18_1').find('input[type="radio"]').prop('checked', false);
-            //         $('.step19_1').find('input[type="radio"]').prop('checked', false);
-            //         $('.step20_1').find('input[type="radio"]').prop('checked', false);
-            //         $('#formInputs').find('input[type="radio"]').prop('checked', false);
+                    $("#radio_input_1").css("display", "none");
+                    $('#radio_input_1').find('input[type="radio"]').prop('checked', false);
+                    $('#radio_input_2').find('input[type="radio"]').prop('checked', false);
+                    $('.step18_1').find('input[type="radio"]').prop('checked', false);
+                    $('.step19_1').find('input[type="radio"]').prop('checked', false);
+                    $('.step20_1').find('input[type="radio"]').prop('checked', false);
+                    $('#formInputs').find('input[type="radio"]').prop('checked', false);
 
-            //     }
+                }
 
-            // });
+            });
 
 
 
-            // $("input[name='item_sc']").change(function() {
+            $("input[name='item_sc']").change(function() {
 
-            //     var valor = $(this).val();
+                var valor = $(this).val();
 
-            //     if (valor == 'Sí') {
+                if (valor == 'Sí') {
 
-            //         $("#radio_input_2").css("display", "block");
-            //         $('#stepInstrucciones').show();
-            //         $('#btn_atras_1').show();
-            //         $('#formInputs').show();
-            //         $('#step18').show();
-            //         $('#step19').show();
-            //         $('#step20').show();
-            //         $('#stepInstrucciones_btn').show();
-            //         $('#stepFinales').hide();
-            //         $('#btn_atras_1').show();
-            //         $('#btn_atras_2').hide();
+                    $("#radio_input_2").css("display", "block");
+                    $('#formInputs').show();
 
-            //     } else {
+                } else {
 
-            //         $("#radio_input_2").css("display", "none");
-            //         $('#stepInstrucciones').hide();
-            //         $('#btn_atras_1').hide();
-            //         $('#formInputs').hide();
-            //         $('#step18').hide();
-            //         $('#step19').hide();
-            //         $('#step20').hide();
-            //         $('#stepInstrucciones_btn').hide();
-            //         $('#stepFinales').show();
-            //         $('#btn_atras_2').show();
-            //         $('#radio_input_1').find('input[type="radio"]').prop('checked', false);
-            //         $('#radio_input_2').find('input[type="radio"]').prop('checked', false);
-            //         $('.step18_1').find('input[type="radio"]').prop('checked', false);
-            //         $('.step19_1').find('input[type="radio"]').prop('checked', false);
-            //         $('.step20_1').find('input[type="radio"]').prop('checked', false);
-            //         $('#formInputs').find('input[type="radio"]').prop('checked', false);
-            //     }
+                    $("#radio_input_2").css("display", "none");
+                    $('#formInputs').hide();
+                    $('#radio_input_1').find('input[type="radio"]').prop('checked', false);
+                    $('#radio_input_2').find('input[type="radio"]').prop('checked', false);
+                    $('.step18_1').find('input[type="radio"]').prop('checked', false);
+                    $('.step19_1').find('input[type="radio"]').prop('checked', false);
+                    $('.step20_1').find('input[type="radio"]').prop('checked', false);
+                    $('#formInputs').find('input[type="radio"]').prop('checked', false);
+                }
 
-            // });
+            });
 
         })
     </script>

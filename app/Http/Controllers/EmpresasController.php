@@ -126,14 +126,7 @@ class EmpresasController extends Controller
             }
             $empresas->rotacion_turnos = json_encode($rotacion_turnos);
 
-            if(isset($request->tipo_empleado)){
-                $tipo_empleado = array();
-                // Recorrer con un ciclo for para obtener los valores
-                for($i = 0; $i < $request->tipo_empleado; $i++){
-                    array_push($tipo_empleado, $_POST['summaryTipoEmpleado_'.$i]);
-                }
-            }
-            $empresas->tipo_empleado = json_encode($tipo_empleado);
+
             $empresas->save();
             return response()->json(['message' => 'Empresa creada correctamente.', 'empresa' => $empresas, 'status' => 'success']);
         }
@@ -250,16 +243,6 @@ class EmpresasController extends Controller
                 }
             }
             $empresas->rotacion_turnos = json_encode($rotacion_turnos);
-
-            if(isset($request->tipo_empleado)){
-                $tipo_empleado = array();
-                // Recorrer con un ciclo for para obtener los valores
-                for($i = 0; $i < $request->tipo_empleado; $i++){
-                    array_push($tipo_empleado, $_POST['summaryTipoEmpleado_'.$i]);
-                }
-            }
-            $empresas->tipo_empleado = json_encode($tipo_empleado);
-
 
             $empresas->save();
             // Mandar mensaje flash en la vista con el mensaje de que se ha actualizado correctamente

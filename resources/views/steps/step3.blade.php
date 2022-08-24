@@ -69,24 +69,6 @@
 
 </div>
 
-<div class="form-group mb-4">
-
-    <label>Tipo de Empleado</label>
-
-    <select class="form-control mb-2" id="tipo_empleado" name="tipo_empleado">
-
-        <option value="">--Elige una opción--</option>
-
-        @foreach ($tipo_empleado as $rotacion)
-
-            <option value="{{ $rotacion }}">{{ $rotacion }}</option>
-
-        @endforeach
-
-    </select>
-
-</div>
-
 
 
 <div class="form-group">
